@@ -1,0 +1,6 @@
+
+
+video
+payment_amount
+in_proces
+have_coupon

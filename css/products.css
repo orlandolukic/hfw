@@ -1,0 +1,72 @@
+
+.product-item
+{
+	transition: 0.2s;
+	border-radius: 3px;
+	padding: 0 0 10px 0;
+	border: 1px solid #FFFFFF;
+	position: relative;
+}
+
+.product-item .image-optimised img { height: 180px; width: 100%; }
+
+.product-item .image-optimised { position: relative; transition: 0.3s; }
+.product-item:hover .image-optimised { opacity: 0.8; }
+
+.product-item:hover
+{
+	background: #FCFCFC;
+	border: 1px solid #E6E6E6;
+}
+
+.eticket-opt
+{
+	padding: 10px 10px 10px 15px; 
+	left: -20px; 
+	top: 25px;
+	font-size: 80%;
+	z-index: 200 !important;
+	position: absolute;
+	transition: 0.3s cubic-bezier(.33,.75,.19,.9);
+}
+
+.product-item:hover .eticket-opt
+{
+	transform: translateY(45px);
+}
+
+.product-item .top-content
+{
+	position: relative;
+}
+
+.product-item .paint-brush
+{
+	position: absolute;
+	top: 0px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 70px;
+	width: 70px;
+	padding: 17px 15px;
+	margin: auto;
+	color: white !important;
+	border: 3px solid #FFFFFF;
+	border-radius: 50%;
+	transform: scale3d(0.2,0.2,0.2);
+	opacity: 0;
+	transition: 0.3s cubic-bezier(.33,.75,.19,.9);
+}
+
+.product-item:hover .paint-brush
+{
+	transform: scale3d(1,1,1);
+	opacity: 1;
+}
+
+.product-item:hover .paint-brush:hover
+{
+	background: white;
+	color: #D1C2A7 !important;			/* theme */
+}

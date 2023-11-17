@@ -1,0 +1,62 @@
+# Start .htaccess
+
+ErrorDocument 403 http://localhost/pr/403
+ErrorDocument 404 http://localhost/pr/404
+ErrorDocument 500 http://localhost/pr/500
+
+RewriteEngine On 
+
+RewriteCond %{REQUEST_URI} !(\.css|\.js|\.png|\.jpg|\.gif|robots\.txt)$ [NC]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^terms$ policy.php [L]
+RewriteRule ^login$ login.php [QSA]
+RewriteRule ^register$ register.php
+
+# Workshop pages, all variations
+RewriteRule ^workshops$ workshops.php
+RewriteRule ^workshops/$ workshops.php
+RewriteRule ^workshops/([a-zA-Z]+)/([a-zA-Z]+)$ workshops.php?sort=$1&sortType=$2 [QSA]
+RewriteRule ^workshops/([0-9]+)/([0-9]+)?$ workshops.php?month=$1&year=$2 [QSA]
+RewriteRule ^workshops/([0-9]+)/([0-9]+)/([a-zA-Z]+)$ workshops.php?month=$1&year=$2&sort=$3 [QSA]
+RewriteRule ^workshops/([0-9]+)/([0-9]+)/([a-zA-Z]+)/([a-zA-Z]+)$ workshops.php?month=$1&year=$2&sort=$3&sortType=$4 [QSA]
+
+RewriteRule ^about$ about.php
+RewriteRule ^contact?$ contact.php 
+RewriteRule ^404 404.php
+RewriteRule ^403 403.php
+RewriteRule ^500 500.php
+RewriteRule ^gallery$ gallery.php [L]
+RewriteRule ^news$ news.php [L]
+RewriteRule ^packages$ packages.php [L]
+RewriteRule ^calendar$ calendar.php [QSA,L]
+
+# Workshop Webpage
+RewriteRule ^workshop/([A-Za-z0-9-]+)/?$ workshop.php?wid=$1
+RewriteRule ^workshop/([A-Za-z0-9]+)$ workshop.php?wid=$1
+RewriteRule ^workshop/([A-Za-z0-9\ ]+)$ workshop.php?wid=$1
+RewriteRule ^workshop/([A-Za-z]+)$ workshop.php?wid=$1
+
+# Validate user
+RewriteRule ^userValidate/([a-z0-9]+)/([a-zA-Z0-9]+)$ requests.php?action=userValidate&redirect=stay&username=$1&token=$2
+RewriteRule ^userValidate/([A-Z]+)/([a-zA-Z0-9]+)$ requests.php?action=userValidate&redirect=stay&username=$1&token=$2
+RewriteRule ^userValidate/([a-z]+)/([a-zA-Z0-9]+)$ requests.php?action=userValidate&redirect=stay&username=$1&token=$2
+RewriteRule ^userValidate/([a-zA-Z]+)/([a-zA-Z0-9]+)$ requests.php?action=userValidate&redirect=stay&username=$1&token=$2
+RewriteRule ^userValidate/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)$ requests.php?action=userValidate&redirect=stay&username=$1&token=$2
+
+# AJAX pages
+RewriteRule ^ajax/control$ ajax/control.php
+RewriteRule ^ajax/email$ ajax/email.php
+RewriteRule ^ajax/payment$ ajax/payment.php
+RewriteRule ^ajax/pull$ ajax/pull.php
+RewriteRule ^ajax/shopping$ ajax/shopping.php
+RewriteRule ^ajax/upload$ ajax/upload.php
+# End of AJAX pages
+
+# Verify payment pages
+RewriteRule ^verifyPayment/paypal/$ requests/verifyPayment.php?paymentType=paypal [QSA]
+RewriteRule ^verifyPayment/credit-card/$ requests/verifyPayment.php?paymentType=credit-card [QSA]
+RewriteRule ^verifyPayment/canceled$ user/cart.php?paymentStatus=canceled
+# End of request pages
+

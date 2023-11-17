@@ -1,0 +1,479 @@
+
+
+.navbar-theme
+{
+	background: white;
+	color: black;
+	border-bottom: 1px solid #C9C9C9;
+}
+
+.navbar-theme a
+{
+	color: #4D4D4D;
+}
+
+.user-image
+{ 
+	position: absolute; 
+	top: -4px; 
+	left: -38px;
+	border-radius: 50% !important;
+	height: 25px;
+}
+
+.heading
+{
+	margin: 30px 0 20px 0;
+}
+
+.workshop-image
+{
+	height: 220px;
+}
+
+.workshop-image.h-180
+{
+	height: 180px;
+}
+
+.link
+{
+	color: inherit;
+}
+
+.link.addedWishList
+{
+	color: #F52525;
+}
+
+.eticket-ui
+{
+	position: absolute;
+	right: -12px;
+	top: 20px;
+	color: white;
+	background: #2FBA16;
+	padding: 5px 10px;
+	border-radius: 2px 2px 0 2px;
+	transition: 0.6s cubic-bezier(.15,.38,0,.94);
+}
+
+.eticket-ui::after
+{
+	position: absolute;
+	bottom: -12px;
+	right: 0;
+	content: " ";
+	border-color: #279614 transparent transparent #279614;
+	border-width: 6px;
+	border-style: solid;
+}
+
+.eticket-ui-user-data-pi
+{
+	position: absolute;
+	right: 20px;
+	top: -10px;
+	color: white;
+	padding: 5px 10px;
+	border-radius: 2px 2px 0 2px;
+	transition: 0.6s cubic-bezier(.15,.38,0,.94);
+	z-index: 9999;	
+}
+
+.eticket-ui-user-data-pi::after
+{
+	position: absolute;
+	top: 0px;
+	left: -9px;
+	content: " ";
+	border-color: transparent  #258BD9 #258BD9 transparent;
+	border-width: 5px;
+	border-style: solid;
+}
+
+.workshop-ui:hover .eticket-ui
+{
+	transform: translateY(50px);
+}
+
+.heading-row
+{
+	background: #F7F7F7;
+}
+
+.cart-image-placeholder img
+{
+	width: 120px;
+	height: 100px;
+}
+
+.cart-image-placeholder
+{
+	float: left;
+	padding-right: 15px;
+}
+
+.cart-heading
+{
+	font-size: 120%;
+	color: #131A6E;
+}
+
+.cart-remove-item
+{
+	padding: 8px 10px;
+	border-radius: 2px;
+	transition: 0.3s;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.cart-remove-item:hover
+{
+	background: #1316AE;
+	color: white;
+}
+
+.cart-price { color: #0D0D0D; font-size: 90% }
+
+.cart-total { color: #3D3D3D; position: relative; }
+
+.cart-total-number { position: relative; }
+
+.row-bordered
+{
+	border: 1px solid #D1D1D1;
+	border-radius: 2px
+}
+
+.payment-option
+{
+	padding: 10px 15px;
+	cursor: pointer;
+	transition: 0.8s
+}
+
+.payment-option:hover
+{
+	background: #F7F7F7;
+}
+
+.payment-option.selected
+{
+	background: #F7F7F7;
+}
+
+.buyer-card
+{
+	background: #F7F7F7;
+	padding: 20px 10px;
+	border: 1px solid #E8E8E8;
+	border-radius: 2px;
+	position: relative;
+}
+
+.sp-section
+{
+	position: absolute;
+	top: 5px;
+	right: 20px;
+}
+
+.sp-section > div 
+{
+	display: inline-block;
+}
+
+.user-data-info
+{
+	background: #FFFFFF;
+	border: 1px solid #F2F2F2;
+	transition: 0.3s;
+	padding: 10px 15px;
+	position: relative;
+	-webkit-box-shadow: -1px 3px 13px -12px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 3px 13px -12px rgba(0,0,0,0.75);
+	box-shadow: -1px 3px 13px -12px rgba(0,0,0,0.75);
+}
+
+.user-data-info > .dropdown-lst
+{
+	position: absolute;
+	right: 15px;
+	top: 10%;
+}
+
+.user-data-info:hover
+{
+	-webkit-box-shadow: -1px 3px 13px -8px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 3px 13px -8px rgba(0,0,0,0.75);
+	box-shadow: -1px 3px 13px -8px rgba(0,0,0,0.75);
+}
+
+.paypal-payment
+{
+	border: 1px solid #dee1e5;
+	color: #131A6E;
+	border-radius: 2px;
+	display: inline-block;
+	transition: 0.3s;
+}
+
+.paypal-text
+{
+	color: #131A6E;
+}
+
+.paypal-payment:hover
+{
+	background-color: #131A6E;
+	color: white;
+}
+
+.pay-or-card
+{
+	padding: 5px 10px;
+	border: 2px solid #F2F2F2;
+	border-radius: 50%;
+	margin: 0 15px 0 15px;
+}
+
+.w-password-placeholder
+{
+	background: transparent;
+	border: 1px dashed transparent;
+	transition: 0.3s;
+	overflow: hidden;
+}
+
+.w-password-placeholder .panel-body
+{
+	position: relative;
+}
+
+.w-password-placeholder:hover
+{
+	background: rgb(0, 173, 239);
+	color: white;
+}
+
+.w-password-placeholder .copy
+{
+	z-index: 200;
+	position: absolute;
+	left: -2px;
+	top: 0;
+	background: white;
+	color: #131A6E;
+	padding: 8px 15px;
+	cursor: pointer;
+	border-radius: 0 0 3px 0;
+	transform: translateY(-50px);
+	transition: 0.6s cubic-bezier(.15,.38,0,.94);
+}
+
+.w-password-placeholder:hover .copy
+{
+	transform: translateY(0);
+}
+
+.w-password-placeholder:hover .copy:hover
+{
+	background: #F5F5F5;
+}
+
+.link-not-selected
+{
+	color: #696969;
+}
+
+.border-styled
+{
+	border:1px solid #D9D9D9;
+}
+
+.subscription-disabled, .op-4
+{
+	opacity: 0.4; 
+	pointer-events: none;
+}
+
+.deactivate-subscription
+{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 200;
+	background: rgba(255,255,255,0.9);
+} 
+
+.deactivate-subscription .cont
+{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 90%;
+	height: 100%;
+	margin: auto;
+}
+
+.price-placeholder
+{
+	border-radius: 3px;
+	background: white;
+	display: inline-block;
+	border: 1px solid #E8E8E8;
+	overflow: hidden;
+}
+
+.price-placeholder div
+{
+	display: inline-block;
+	padding: 3px 10px;
+	background-color: #FFFFFF;
+}
+
+.price-placeholder.md
+{
+	background: transparent;
+	border: 1px solid #F5F5F5;
+}
+
+.price-placeholder.md { text-align: center; }
+
+.price-placeholder.md div
+{
+	width: 100%;
+}
+
+.price-placeholder.md div:nth-child(1) { padding: 4px 10px; }
+.price-placeholder.md div:nth-child(2) { display: block; }
+
+.profile-picture-placeholder
+{
+	width: 100%;
+	border-radius: 50%;
+	height: 100%;
+	overflow: hidden !important;
+	position: relative;
+	border:1px solid #F5F5F5;
+}
+
+.profile-picture-placeholder > .overlay
+{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+	z-index: 950;
+	background: rgba(0,0,0,0.4);
+	color: white;
+	opacity: 0;
+}
+
+.profile-picture-placeholder > .overlay:hover
+{
+	opacity: 1;
+}
+
+.profile-picture-placeholder > .overlay > .content
+{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 80%;
+	height: 50px;
+	opacity: 0;
+	transition: 0.4s;
+	color: white !important;	
+}
+
+.profile-picture-placeholder > .overlay:hover > .content, .profile-picture-placeholder > .overlay:hover > .content-bottom
+{
+	opacity: 1
+}
+
+.profile-picture-placeholder > .overlay > .content > i
+{
+	transition: 0.6s;
+}
+
+.profile-picture-placeholder > .overlay:hover > .content > i
+{
+	transform: scale3d(1.8,1.8,1.8);
+}
+
+.profile-picture-loading
+{
+	position: absolute;
+	top: 0;
+	right: 10px;
+	z-index: 250;
+}
+
+.profile-picture-placeholder > .overlay > .content-bottom
+{
+	position: absolute;
+	top: 0;
+	margin: auto;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: 0.4s;
+	color: white !important;	
+}
+
+.profile-picture-placeholder > .overlay > .content-bottom > .inner-bottom
+{
+	position: absolute;
+	width: 100%;
+	bottom: 30px;
+	text-align: center;
+}
+
+.hide-elems
+{
+	background: transparent;
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.coupon-placeholder
+{
+	background: rgba(51,204,201, 0.3);
+	border: 1.3px dashed #319E9C;
+	border-radius: 5px;
+	padding: 10px 12px;
+	position: relative;
+}
+
+.coupon-placeholder .scissors
+{
+	position: absolute;
+	right: 30px;
+	top: -14px;
+}
+
+.coupon-placeholder .scissors img
+{
+	width: 18px; 
+	transform: rotate(-90deg);
+}

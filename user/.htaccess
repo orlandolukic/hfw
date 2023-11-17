@@ -1,0 +1,30 @@
+
+# Start
+RewriteRule ^cart/?$ cart.php 
+RewriteRule ^receipt/([a-zA-Z0-9-]+)/?$ receipt.php?pid=$1
+RewriteRule ^receipt$ receipt.php [QSA]
+RewriteRule ^subscriptions/?$ subscriptions.php 
+RewriteRule ^workshops$ workshops.php [QSA]
+RewriteRule ^wishlist$ wishlist.php
+
+
+# Prevent .php in URL
+# End of prevent .php in URL
+
+# Login Page Rewrite Rules
+RewriteRule ^addCart/([a-z]+)/([0-9])$ index.php?action=addCart&type=$1&cid=$2 [QSA]
+RewriteRule ^addCart/([a-zA-Z]+)$ index.php?action=addCart&type=$1 [QSA]
+RewriteRule ^addCart/([a-zA-Z]+)/([a-zA-Z0-9]+)$ index.php?action=addCart&type=$1&cid=$2 [QSA]
+# End of rewrite rule for login
+
+# End of prevent
+
+RewriteRule ^video/([a-zA-Z0-9]+)$ video.php?wid=$1 [QSA]
+
+# Settings
+RewriteRule ^settings$ settings.php
+RewriteRule ^settings/$ settings.php
+RewriteRule ^settings/([A-Za-z]+)/$ settings.php?action=$1
+RewriteRule ^settings/([A-Za-z]+)$ settings.php?action=$1 [QSA]
+RewriteRule ^logout$ logout.php
+RewriteRule ^logout/$ logout.php
